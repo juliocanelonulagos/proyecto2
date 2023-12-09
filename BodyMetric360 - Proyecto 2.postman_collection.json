@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "050edbd9-9d70-4b63-b11a-f2dc72e8b8e9",
+		"name": "BodyMetric360 - Proyecto 2",
+		"description": "Postman collection para utilizar en el proyecto 2 de las encuestas de BodyMetric360",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7509781",
+		"_collection_link": "https://universal-zodiac-591287.postman.co/workspace/DevelopAI~5692f054-79ef-4f2d-b734-5d7a6dc7acf0/collection/7509781-050edbd9-9d70-4b63-b11a-f2dc72e8b8e9?action=share&source=collection_link&creator=7509781"
+	},
+	"item": [
+		{
+			"name": "Terminos y Condiciones",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://apirest.servery2k.link/bodymetric360/terms",
+					"protocol": "https",
+					"host": [
+						"apirest",
+						"servery2k",
+						"link"
+					],
+					"path": [
+						"bodymetric360",
+						"terms"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Terminos y Condiciones",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://apirest.servery2k.link/bodymetric360/terms",
+							"protocol": "https",
+							"host": [
+								"apirest",
+								"servery2k",
+								"link"
+							],
+							"path": [
+								"bodymetric360",
+								"terms"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 30 Nov 2023 04:31:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2092"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"82c-5ZKvGQHhOcvRrqZEl02t7HC5KFM\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Éxito\",\n    \"data\": [\n        {\n            \"title\": \"0. Términos y Condiciones 📜\",\n            \"description\": \"Al acceder y utilizar la aplicación BodyMetric360, y al participar en nuestra encuesta de salud, usted acepta los siguientes términos y condiciones:\"\n        },\n        {\n            \"title\": \"1. Consentimiento para Uso de Datos 📄✅\",\n            \"description\": \"Al responder nuestra encuesta, usted otorga su consentimiento para que utilicemos la información proporcionada con fines académicos y de investigación, enfocados en la salud de la comunidad universitaria. Los datos recolectados podrán ser empleados en estudios estadísticos, publicaciones académicas, o para el desarrollo de políticas de salud en la universidad.\"\n        },\n        {\n            \"title\": \"2. Anonimato y Privacidad 🕵️\\u200d♂️🔒\",\n            \"description\": \"Garantizamos que la información que nos proporcione será tratada con total anonimato. No recopilamos nombres ni cualquier otro dato que permita identificarlo directamente. Los datos solicitados estarán exclusivamente relacionados con aspectos tales como género, peso, altura, calidad del sueño, consumo de agua, hábitos alimenticios y nivel de actividad física.\"\n        },\n        {\n            \"title\": \"3. Uso de Datos 💾🔍.\",\n            \"description\": \"Los datos que recopilemos serán analizados y utilizados con el único fin de comprender y mejorar la salud general de nuestra comunidad universitaria. Estos datos serán cruciales para obtener una visión más completa de los hábitos de salud y bienestar en la universidad.\"\n        },\n        {\n            \"title\": \"4. Voluntariedad y Retiro 🤝🚪\",\n            \"description\": \"Su participación en esta encuesta es enteramente voluntaria. Usted tiene el derecho de no participar o de retirarse de la encuesta en cualquier momento, sin ninguna consecuencia negativa.\"\n        },\n        {\n            \"title\": \"5. Seguridad de los Datos 🔐💻\",\n            \"description\": \"Nos comprometemos a tomar todas las medidas necesarias para asegurar la protección, seguridad y confidencialidad de sus datos.\"\n        },\n        {\n            \"title\": \"6. Confirmación de Acuerdo 🖊️📑\",\n            \"description\": \"Al pulsar el botón DE ACUERDO, usted confirma que ha leído, comprendido y acepta los términos y condiciones establecidos.\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener Carreras ULAGOS Castro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apirest.servery2k.link/bodymetric360/majors",
+					"protocol": "https",
+					"host": [
+						"apirest",
+						"servery2k",
+						"link"
+					],
+					"path": [
+						"bodymetric360",
+						"majors"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener Carreras ULAGOS Castro",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apirest.servery2k.link/bodymetric360/majors",
+							"protocol": "https",
+							"host": [
+								"apirest",
+								"servery2k",
+								"link"
+							],
+							"path": [
+								"bodymetric360",
+								"majors"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Dec 2023 14:25:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "412"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19c-6YhxKYLGgt4nMFOCLFCI5XBy73I\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Éxito\",\n    \"data\": [\n        \"Construcción Civil\",\n        \"Ing. Administración Pública\",\n        \"Ing. Administración de Empresas\",\n        \"Ing. Informática\",\n        \"Pedagogía en Educación General Básica\",\n        \"Psicología\",\n        \"T.N.S. Enfermería\",\n        \"T.U. Administración de Empresas\",\n        \"T.U. Construcción\",\n        \"T.U. Deportivo Universitario\",\n        \"T.U. Educación Parvularia\",\n        \"T.U. Electricidad y Automatización\",\n        \"T.U. Informática\",\n        \"Terapia Ocupacional\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Enviar datos de encuesta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gender\": \"Masculino\",\r\n  \"age\": 44,\r\n  \"major\": \"Ing. Informática\",\r\n  \"weight\": 1.72,\r\n  \"height\": 79.8,\r\n  \"dietQuality\": \"Todos los días\",\r\n  \"waterIntake\": 8,\r\n  \"sleepHours\": 8,\r\n  \"sleepQuality\": \"Buena\",\r\n  \"physicalActivity\": \"Muy Activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apirest.servery2k.link/bodymetric360/submit",
+					"protocol": "https",
+					"host": [
+						"apirest",
+						"servery2k",
+						"link"
+					],
+					"path": [
+						"bodymetric360",
+						"submit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Enviar datos de encuesta",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"gender\": \"Masculino\",\r\n  \"age\": 44,\r\n  \"major\": \"Ing. Informática\",\r\n  \"weight\": 1.72,\r\n  \"height\": 79.8,\r\n  \"dietQuality\": \"Todos los días\",\r\n  \"waterIntake\": 8,\r\n  \"sleepHours\": 8,\r\n  \"sleepQuality\": \"Buena\",\r\n  \"physicalActivity\": \"Muy Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apirest.servery2k.link/bodymetric360/submit",
+							"protocol": "https",
+							"host": [
+								"apirest",
+								"servery2k",
+								"link"
+							],
+							"path": [
+								"bodymetric360",
+								"submit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Dec 2023 14:25:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-7dXogMlmVv+ES8hZlvC9SAql/T0\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Datos enviados con éxito\",\n    \"data\": {\n        \"id\": 54\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener encuestas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"gender\": \"Masculino\",\r\n  \"age\": 44,\r\n  \"major\": \"Ing. Informática\",\r\n  \"weight\": 1.72,\r\n  \"height\": 79.8,\r\n  \"dietQuality\": \"Todos los días\",\r\n  \"waterIntake\": 8,\r\n  \"sleepHours\": 8,\r\n  \"sleepQuality\": \"Buena\",\r\n  \"physicalActivity\": \"Muy Activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apirest.servery2k.link/bodymetric360/survey?start=1&limit=1",
+					"protocol": "https",
+					"host": [
+						"apirest",
+						"servery2k",
+						"link"
+					],
+					"path": [
+						"bodymetric360",
+						"survey"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener encuestas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"gender\": \"Masculino\",\r\n  \"age\": 44,\r\n  \"major\": \"Ing. Informática\",\r\n  \"weight\": 1.72,\r\n  \"height\": 79.8,\r\n  \"dietQuality\": \"Todos los días\",\r\n  \"waterIntake\": 8,\r\n  \"sleepHours\": 8,\r\n  \"sleepQuality\": \"Buena\",\r\n  \"physicalActivity\": \"Muy Activo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apirest.servery2k.link/bodymetric360/survey?start=1&limit=10",
+							"protocol": "https",
+							"host": [
+								"apirest",
+								"servery2k",
+								"link"
+							],
+							"path": [
+								"bodymetric360",
+								"survey"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Dec 2023 14:25:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2737"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ab1-puOqr6dyiF1/A2uXPnydOJoy5xg\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Éxito\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"gender\": \"Femenino\",\n            \"age\": 52,\n            \"major\": \"Pedagogía en Educación General Básica\",\n            \"weight\": 58.58828985003792,\n            \"height\": 170.10593806723574,\n            \"dietQuality\": \"Todos los días\",\n            \"waterIntake\": 3.0545714478209467,\n            \"sleepHours\": 10,\n            \"sleepQuality\": \"Regular\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 3,\n            \"gender\": \"Femenino\",\n            \"age\": 37,\n            \"major\": \"T.U. Electricidad y Automatización\",\n            \"weight\": 63.07659919199498,\n            \"height\": 169.41903175739904,\n            \"dietQuality\": \"Nunca\",\n            \"waterIntake\": 1.1195517646544733,\n            \"sleepHours\": 7,\n            \"sleepQuality\": \"Muy Mala\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 4,\n            \"gender\": \"Prefiero no decir\",\n            \"age\": 23,\n            \"major\": \"Construcción Civil\",\n            \"weight\": 93.94805886064685,\n            \"height\": 168.60989584853778,\n            \"dietQuality\": \"Raramente\",\n            \"waterIntake\": 2.0429737509058086,\n            \"sleepHours\": 6,\n            \"sleepQuality\": \"Excelente\",\n            \"physicalActivity\": \"Ligeramente Activo\"\n        },\n        {\n            \"id\": 5,\n            \"gender\": \"Prefiero no decir\",\n            \"age\": 18,\n            \"major\": \"T.U. Deportivo Universitario\",\n            \"weight\": 53.71650529752137,\n            \"height\": 151.64559067594166,\n            \"dietQuality\": \"Algunos días\",\n            \"waterIntake\": 3.773200012168056,\n            \"sleepHours\": 12,\n            \"sleepQuality\": \"Excelente\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 6,\n            \"gender\": \"Otro\",\n            \"age\": 59,\n            \"major\": \"T.U. Construcción\",\n            \"weight\": 57.545500420502606,\n            \"height\": 199.6018339300564,\n            \"dietQuality\": \"Nunca\",\n            \"waterIntake\": 4.235216403719735,\n            \"sleepHours\": 8,\n            \"sleepQuality\": \"Buena\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 7,\n            \"gender\": \"Otro\",\n            \"age\": 58,\n            \"major\": \"Ing. Administración de Empresas\",\n            \"weight\": 93.99107814318056,\n            \"height\": 187.41035761607029,\n            \"dietQuality\": \"Todos los días\",\n            \"waterIntake\": 3.6785078148914625,\n            \"sleepHours\": 10,\n            \"sleepQuality\": \"Muy Mala\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 8,\n            \"gender\": \"Otro\",\n            \"age\": 39,\n            \"major\": \"T.U. Deportivo Universitario\",\n            \"weight\": 66.29093786098338,\n            \"height\": 154.61242136506044,\n            \"dietQuality\": \"La mayoría de los días\",\n            \"waterIntake\": 1.229955732720186,\n            \"sleepHours\": 10,\n            \"sleepQuality\": \"Buena\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 9,\n            \"gender\": \"Prefiero no decir\",\n            \"age\": 50,\n            \"major\": \"T.U. Electricidad y Automatización\",\n            \"weight\": 98.71059341156746,\n            \"height\": 197.87378663135863,\n            \"dietQuality\": \"La mayoría de los días\",\n            \"waterIntake\": 4.5935477476942355,\n            \"sleepHours\": 4,\n            \"sleepQuality\": \"Mala\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 10,\n            \"gender\": \"Femenino\",\n            \"age\": 51,\n            \"major\": \"T.N.S. Enfermería\",\n            \"weight\": 85.75469065003058,\n            \"height\": 161.50441330482292,\n            \"dietQuality\": \"La mayoría de los días\",\n            \"waterIntake\": 1.4275645225647688,\n            \"sleepHours\": 7,\n            \"sleepQuality\": \"Muy Mala\",\n            \"physicalActivity\": \"Muy Activo\"\n        },\n        {\n            \"id\": 11,\n            \"gender\": \"Otro\",\n            \"age\": 24,\n            \"major\": \"T.U. Construcción\",\n            \"weight\": 94.68732129491144,\n            \"height\": 180.54710671012774,\n            \"dietQuality\": \"Todos los días\",\n            \"waterIntake\": 4.46067771334466,\n            \"sleepHours\": 4,\n            \"sleepQuality\": \"Buena\",\n            \"physicalActivity\": \"Moderadamente Activo\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiKey",
+			"value": "123e4567-e89b-12d3-a456-426614174000",
+			"type": "string"
+		}
+	]
+}
