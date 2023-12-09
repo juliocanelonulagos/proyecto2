@@ -1,0 +1,191 @@
+openapi: 3.0.0
+info:
+  title: BodyMetric360 Data Collection API
+  version: 1.0.0
+  description: API for collecting health and lifestyle data from the BodyMetric360 mobile app.
+servers:
+  - url: https://apirest.servery2k.link/bodymetric360
+paths:
+  /submit:
+    post:
+      summary: Submit Health Survey Data
+      description: Endpoint to submit the data collected from the BodyMetric360 health survey.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gender:
+                  type: string
+                  enum: [Masculino, Femenino, Otro, Prefiero no decir]
+                age:
+                  type: integer
+                major:
+                  type: string
+                weight:
+                  type: number
+                  format: float
+                height:
+                  type: number
+                  format: float
+                dietQuality:
+                  type: string
+                  enum: [Todos los días, La mayoría de los días, Algunos días, Raramente, Nunca]
+                waterIntake:
+                  type: number
+                  format: float
+                sleepHours:
+                  type: integer
+                sleepQuality:
+                  type: string
+                  enum: [Muy Mala, Mala, Regular, Buena, Excelente]
+                physicalActivity:
+                  type: string
+                  enum: [Sedentario, Ligeramente Activo, Moderadamente Activo, Muy Activo]
+      responses:
+        '200':
+          description: Data submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Éxito
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: Ana López Canelon
+                      description:
+                        type: string
+                        example: Amante de la naturaleza y el senderismo
+        '400':
+          description: Invalid input data
+
+  /majors:
+    get:
+      summary: List University Majors
+      description: Endpoint to retrieve a list of university majors for dropdown selection.
+      responses:
+        '200':
+          description: A list of university majors
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Éxito
+                  data:
+                    type: array
+                    items:
+                      type: string
+                    example: ["Pedagogía en Educación General Básica", "Ingeniería en Informática"]
+                    
+  /terms:
+    get:
+      summary: Get Terms and Conditions
+      description: Endpoint to retrieve the terms and conditions for using the BodyMetric360 app.
+      responses:
+        '200':
+          description: Terms and conditions text retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    title:
+                      type: string
+                    description:
+                      type: string
+                example:
+                  - title: "Términos y Condiciones"
+                    description: "Al acceder y utilizar la aplicación BodyMetric360, y al participar en nuestra encuesta de salud, usted acepta los siguientes términos y condiciones:"
+                  - title: "1. Consentimiento para Uso de Datos"
+                    description: "Al responder nuestra encuesta, usted otorga su consentimiento para que utilicemos la información proporcionada con fines académicos y de investigación, enfocados en la salud de la comunidad universitaria. Los datos recolectados podrán ser empleados en estudios estadísticos, publicaciones académicas, o para el desarrollo de políticas de salud en la universidad."
+        '400':
+          description: Error retrieving terms and conditions
+          
+  /survey:
+    get:
+      summary: Retrieve Health Survey Data
+      description: Retrieve a list of submissions from the BodyMetric360 health survey.
+      parameters:
+        - in: query
+          name: start
+          schema:
+            type: integer
+            default: 0
+          description: The starting index of the records to retrieve.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 10
+          description: The number of records to retrieve.
+      responses:
+        '200':
+          description: A list of health survey data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Success
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1
+                        gender:
+                          type: string
+                          enum: [Masculino, Femenino, Otro, Prefiero no decir]
+                        age:
+                          type: integer
+                          example: 25
+                        major:
+                          type: string
+                          example: Ingeniería en Informática
+                        weight:
+                          type: number
+                          format: float
+                          example: 70.5
+                        height:
+                          type: number
+                          format: float
+                          example: 175.5
+                        dietQuality:
+                          type: string
+                          enum: [Todos los días, La mayoría de los días, Algunos días, Raramente, Nunca]
+                        waterIntake:
+                          type: number
+                          format: float
+                          example: 2.5
+                        sleepHours:
+                          type: integer
+                          example: 8
+                        sleepQuality:
+                          type: string
+                          enum: [Muy Mala, Mala, Regular, Buena, Excelente]
+                        physicalActivity:
+                          type: string
+                          enum: [Sedentario, Ligeramente Activo, Moderadamente Activo, Muy Activo]
+        '400':
+          description: Invalid request
+ 
